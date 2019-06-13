@@ -1,0 +1,8 @@
+.deleteall-button{
+  float: right;
+}
+.table .thead-dark th {
+  color: #fff;
+  background-color: #4faf50;
+  border-color: #4faf50;
+}

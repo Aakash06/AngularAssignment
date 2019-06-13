@@ -1,0 +1,15 @@
+.table{
+  border: 1px solid #4faf50;
+  border-radius: 20px 5px;
+}
+
+.table .thead-dark th {
+  color: #fff;
+  background-color: #4faf50;
+  border-color: #4faf50;
+}
+
+.table .thead-dark td a, .table .thead-dark td a {
+  text-decoration: none;
+  color: black;
+}

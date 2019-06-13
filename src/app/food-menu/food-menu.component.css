@@ -1,0 +1,80 @@
+.green{
+  color: green;
+  font-size: 1.2em;
+}
+
+.red{
+  color: red;
+  font-size: 1.2em;
+}
+
+.disabled{
+  background-color: #bbbbbb;
+  pointer-events: none;
+  cursor: default;
+  opacity: 0.8;
+}
+
+.enabled{
+  background-color: #ffffff;
+}
+
+.food-category{
+  padding-top: 12px;
+  padding-bottom: 12px;
+  text-align: left;
+  background-color: #4CAF50;
+  color: white;
+  padding-left: 12px;
+}
+
+.left-sidebar{
+  background-color: #dedede;
+}
+
+.table .table-green th {
+  color: #fff;
+  background-color: #4faf50;
+  border-color: #4faf50;
+}
+
+.scroll {
+  height: 90vh;
+  overflow: auto;
+  padding-right: 0;
+}
+
+.scroll1::-webkit-scrollbar {
+  width: 5px;
+}
+
+.scroll1::-webkit-scrollbar-track {
+  background: #ddd;
+}
+
+.scroll1::-webkit-scrollbar-thumb {
+  background: #3c7f3d;
+}
+
+.table{
+  border: 1px solid #4faf50;
+  border-radius: 20px 5px;
+}
+
+.cart-items{
+  border-bottom-style: dotted;
+  border-bottom-color: hsla(89, 43%, 51%, 0.3);
+}
+
+.cart-items:last-child:after{
+  border: 0;
+}
+
+.cart-items .price{
+  float: right;
+}
+
+.cart-buttons{
+  float: right;
+  margin-right: 3%;
+}

@@ -1,0 +1,44 @@
+
+<div class="container-fluid">
+  <div class="row">
+    <div class="col-md-3">
+      <app-category-sidebar [foodItems]="foodItems"></app-category-sidebar>
+    </div>
+    <div class="col-md-6 scroll scroll1 my-3">
+      <div *ngFor="let foodItem of foodItems | groupBy:'category'">
+        <table class="table">
+          <thead class="table-green" [attr.id]="foodItem.key.split(' ').join('-')">
+          <th scope="col" colspan="4">{{ foodItem.key }}</th>
+          </thead>
+          <tbody>
+          <tr *ngFor="let foodDetail of foodItem.value">
+            <div class="cart-items">
+              <div [ngClass]="CheckTimeAvailability(foodDetail.availabletime) ? 'enabled' : 'disabled'">
+                <div class="p-3">
+                  <h5><span [ngClass]="foodDetail.vegflag == 'veg' ? 'green' : 'red'">&#8865;</span>
+                    <span>{{ foodDetail.name }} </span>
+                    <span class="price">&#8377; {{ foodDetail.price }}</span>
+                    <span class="cart-buttons">
+                              <button ng-disabled="CheckTimeAvailability(foodDetail.availabletime) ? 'enabled' : 'disabled'" (click)="DeleteItem(foodDetail)" type="button" class="button btn-space hollow btn-sm btn btn-default" data-quantity="minus">
+                                <i class="fa fa-minus" aria-hidden="true"></i>
+                              </button>
+                              <button ng-disabled="CheckTimeAvailability(foodDetail.availabletime) ? 'enabled' : 'disabled'" (click)="AddItem(foodDetail)" type="button" class="button hollow btn-sm btn btn-success" data-quantity="minus">
+                                <i class="fa fa-plus" aria-hidden="true"></i>
+                              </button>
+                          </span>
+                  </h5>
+                  <h6>{{ foodDetail.availabletime }}</h6>
+                </div>
+              </div>
+            </div>
+          </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+    <div class="col-md-3">
+      <app-cart [foodCart]="foodCart" [totalPrice]="totalPrice" (EmptyFoodCart)="EmptyCart()" ></app-cart>
+    </div>
+  </div>
+</div>
+
